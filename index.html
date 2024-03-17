@@ -1,42 +1,102 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>新辉光相亲网站</title>
+    <title>花好月圆</title>
+    <style>
+        /* CSS 样式可以放在这里 */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav {
+            background-color: #666;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 5px;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>欢迎来到新辉光相亲网站</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">首页</a></li>
-                <li><a href="#about">关于我们</a></li>
-                <li><a href="#services">服务项目</a></li>
-                <li><a href="#contact">联系方式</a></li>
-            </ul>
-        </nav>
+        <h1>相亲网站</h1>
     </header>
-    <main>
-        <section id="home">
-            <h2>首页</h2>
-            <p>这里是网站的介绍。</p>
-        </section>
-        <section id="about">
-            <h2>关于我们</h2>
-            <p>这里是关于我们的信息。</p>
-        </section>
-        <section id="services">
-            <h2>服务项目</h2>
-            <p>这里是我们提供的服务项目。</p>
-        </section>
-        <section id="contact">
-            <h2>联系方式</h2>
-            <p>这里是我们的联系方式。</p>
-        </section>
-    </main>
+    <nav>
+        <a href="#register">注册</a>
+        <a href="#search">查询</a>
+        <a href="#match">配对</a>
+        <a href="#push">推送</a>
+    </nav>
+    <section id="register">
+        <h2>注册</h2>
+        <!-- 注册表单 -->
+        <form>
+            <label for="username">用户名:</label>
+            <input type="text" id="username" name="username"><br><br>
+            <label for="email">邮箱:</label>
+            <input type="email" id="email" name="email"><br><br>
+            <label for="password">密码:</label>
+            <input type="password" id="password" name="password"><br><br>
+            <input type="submit" value="注册">
+        </form>
+    </section>
+    <section id="search">
+        <h2>查询</h2>
+        <!-- 查询表单 -->
+        <form>
+            <label for="criteria">查询条件:</label>
+            <input type="text" id="criteria" name="criteria"><br><br>
+            <input type="submit" value="查询">
+        </form>
+    </section>
+    <section id="match">
+        <h2>配对</h2>
+        <!-- 配对结果显示 -->
+        <div id="match-result">
+            <!-- 这里可以显示配对结果 -->
+        </div>
+    </section>
+    <section id="push">
+        <h2>推送</h2>
+        <!-- 推送表单 -->
+        <form>
+            <label for="message">消息内容:</label><br>
+            <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+            <input type="submit" value="发送">
+        </form>
+    </section>
     <footer>
-        <p>© 2024 新辉光相亲网站</p>
+        &copy; 2024 相亲网站
     </footer>
 </body>
 </html>
