@@ -1,113 +1,599 @@
-<!DOCTYPE html>
-<!--
-    Plain-Academic by Vasilios Mavroudis
-    Released under the Simplified BSD License/FreeBSD (2-clause) License.
-    https://github.com/mavroudisv/plain-academic
--->
-
-<html lang="en">
-<head>
-  <title>John Doe</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
-</head>
-<body>
+<html>
+    <!-- BEGIN HEAD -->
+    <head>
+        <meta charset="utf-8"/>
+        <title>Vasilios Mavroudis</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+        <meta content="" name="description"/>
+        <meta content="Vasilios Mavroudis" name="author"/>
 
 
-<!-- Navigation -->
-	<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
-	  <div class="container">
-		<div class="navbar-header">
-		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
+        <link href="https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script>
+	$(document).ready(function() {
+	    $("#toggleNews").click(function() {
+	        $("#newsContent").slideToggle(400, function() {
+	            var btnText = $("#newsContent").is(":visible") ? "Hide News" : "Show News";
+	            $("#toggleNews").text(btnText);
+	        });
+	    });
+	});
+    	</script>
+
+
+        <link href="css/layout.min.css"    rel="stylesheet" type="text/css"/>
+    </head>
+
+    <body>
+
+			<nav class="navbar" role="navigation">
+                <div class="container">
+					<div class="navbar-header navbar-inverse">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-collapse-1">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+				</div>
+			<header class="header">
+				<div class="container">
+					<div class="collapse navbar-collapse" id="bs-navbar-collapse-1">
+						<ul class="navbar-nav">
+							<li class="nav-item">
+							<a class="nav-item-child" href="/">Home</a></li>
+							<li class="nav-item"><a class="nav-item-child" href="#news">News</a></li>
+							<li class="nav-item"><a class="nav-item-child" href="#projects">Projects</a></li>
+							<li class="nav-item"><a class="nav-item-child" href="#publications">Publications</a></li>
+							<li class="nav-item"><a class="nav-item-child" href="#talks">Talks</a></li>
+							<!--<li class="nav-item"><a class="nav-item-child" href="#service">Service</a></li>-->
+							<li class="nav-item"><a class="nav-item-child" href="#media">Media</a></li>
+						</ul>
+					</div>
+				</div>
+			</header>
+            </nav>
+        
+	
+        <div class="bg-color-sky-light">
+			<div class="bg-color-white ">
+				<div class="content-md container" style="display: block;  margin-top: -100px;">
+					<div class="row">
+						<div class="col-sm-8  text-justify">
+			                <p><img class="img-responsive" src="img/photo_hor.jpg" alt="" style="margin-bottom:30px"></p>
+					<p></br>I am a Principal Research Scientist co-leading the <a href="https://turing.ac.uk/aicd">AI for Cyberdefence (AICD) Research Center</a> at the <a href="https://turing.ac.uk/">Alan Turing Institute</a> in London, UK.</p> <p></br>My research sits at the intersection of Systems Security and Machine Learning, covering topics such as autonomous network defence and AI Cyber Risks. You can find my recent publications (see <a class="nav-item-child" href="#publications">Publications</a> and <a href="https://scholar.google.co.uk/citations?user=b10w74sAAAAJ&hl=en">Scholar</a>) for relevant papers and preprints in this domain. 
+					
+					I have recently led the release of our <em>AI Cyber Risk Benchmark</em> on automated vulnerability detection as well as the cyber offense section in the <em>International Scientific Report on the Safety of Advanced AI (Interim Report)</em> alongside Yoshua Bengio and other distinguished experts (final version out soon!).</p> <p>
+					
+					My research has been published in top-tier academic venues such as NeurIPS, the ACM Conference on Computer and Communications Security (CCS), the Privacy Enhancing Technologies Symposium (PETs), and the Network & Distributed System Security Symposium (NDSS). I also enjoy presenting at practitioner-focused events such as BlackHat US/EU, Defcon, and the Chaos Communication Congress. I have been honored to appear in the 10-of-200 young researchers' list by the Heidelberg Laureate Forum.</p> 
+					
+					<p>Apart from my main research area, I have contributed to various other initiatives. Snappy is a fast-payment solution for slow permissionless blockchains, paving the way to preconfs which are now taking off. Myst is a high-assurance <a href="https://BackdoorToleranceHardware.github.io">cryptographic hardware prototype</a> that was the first trojan-resilient system matching the performance of conventional hardware security modules (CSAW 2018 Competition Finalist). My work on <a href="https://ubeacsec.github.io">ultrasound tracking</a> received <a href="https://ubeacsec.github.io/#Press">broad media attention</a> and is considered seminal in this field. In collaboration with <a href="https://crocs.fi.muni.cz/people/svenda">Petr Svenda</a>, we released the first open-source <a href="https://opencryptojc.org/">cryptographic library</a> for JavaCards enabling developers to break free from manufacturer lock-ins. I have also published numerous studies examining market fairness and manipulation from a security perspective..
+
+							
+							<div align="center" style="padding-top:2em;margin-bottom:-1em">
+									<a style="color:#333; padding-right:1em" href="https://ubeacsec.github.io/"><img src="img/icons/tv.png" width="50"</a>
+									<a style="color:#333; padding-right:1em" href="https://TrojanTolerantHardware.github.io"><img src="img/icons/chip.png" width="40"></a>
+									<a style="color:#333; padding-right:1em" href="https://opencryptojc.org"><img src="img/icons/factory.png" width="40"></a> 
+							</div>
+						</div>
+						
+						<div class="col-sm-3">
+							<p>
+								<h4>Vasilios Mavroudis</h4>
+								<b>vmavroudis at turing.ac.uk</b><br>
+							
+								Defence and Security programme<br>
+								Alan Turing Institute<br>
+								96 Euston Rd<br>
+								London NW1 2DB<br>
+								United Kingdom<br>
+							</p>
+							<a style="color:#333;" href="https://scholar.google.co.uk/citations?hl=en&user=b10w74sAAAAJ&view_op=list_works&sortby=pubdate"><img src="img/icons/scholar.png" width="30" height="30"></a>
+							<a style="color:#333;" href="https://github.com/mavroudisv/"><img src="img/icons/github.png" width="30" height="30"></a>
+							<a style="color:#333;" href="https://medium.com/@mavroudisv/"><img src="img/icons/medium.png" width="30" height="30"></a>
+							<!--<a style="color:#333;" href="https://www.linkedin.com/in/mavroudisv"><img src="img/icons/in.png" width="30" height="30"></a>-->
+							<a style="color:#333;" href="https://www.youtube.com/channel/UCti34A0wGEgbghqXC-rxPkQ"><img src="img/icons/yt.png" width="30" height="30"></a>
+							<a style="color:#333;" href="https://twitter.com/mavroudisv"><img src="img/icons/twitter.png" width="30" height="30"></a>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 
-		<!-- Collect the nav links, forms, and other content for toggling -->
-		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		  <ul class="nav navbar-nav">
-				  <li><a href="index.html">Home</a></li>
-				  <li><a href="#">Projects</a></li>
-				  <li><a href="#publications">Publications</a></li> 
-				  <li><a href="#">CV</a></li> 
-		  </ul>
+		
+		
+		<div class="bg-light" style="display: block;">
+			<div class="content-md container">
+				<div class="row">
+					<h2 id="news">Recent News</h2>
+					 <button id="toggleNews" class="btn btn-primary">Show News</button>
+                			<div id="newsContent" style="display: none;">
+               
+						<enlist class="enlist">December 2019: Our paper on fast decentralized on-chain payments was accepted at NDSS 2020 and is a finalist for the <a href="https://ethz.ch/en/industry-and-society/techoffer/spark-award/2020.html">Spark Award</a>!</enlist>
+						
+						<enlist class="enlist">August 2019: Our paper on neural net-based side-channel attacks was accepted at IACR Asiacrypt 2019!</enlist>
+						
+						<enlist class="enlist">July 2019: Our paper with Refinitiv will appear at the ACM conference on Advances in Financial technologies!</enlist>
+						
+						<enlist class="enlist">June 2019: I was awarded one of the three Oasis Labs' fellowships for 2019-2020!</enlist>
+	
+						<enlist class="enlist">May 2019: Tradescope: Our project on market manipulation is live! </enlist>
+						
+						<enlist class="enlist">Feb 2019: I will attend the 3rd <a href="https://aisafetycamp.com/">AI Safety Camp</a> to work on Intelligent Agent side-effects and ML Robustness!</enlist>
+						
+						<enlist class="enlist">Feb 2019: Stream of works on "Market manipulation as a security problem" accepted on <a href="https://www.threat-arrest.eu/html/eurosec-2019/">Eurosec 2019</a> and the <a href="https://www.cl.cam.ac.uk/events/spw/2019/">27th Workshop on Security Protocols</a>!</enlist>
+						
+						<enlist class="enlist">Jan 2019: My interview at the Heidelberg Laureate Forum is now online! [<a href="https://www.youtube.com/watch?v=6mkkPhxaD1U">Link</a>]</enlist>
+						
+						<enlist class="enlist">Jan 2019: I am a fellow in the <a href="https://conceptionx.org/">ConceptionX</a> commercialization and entrepreneurship program!</enlist>
+						
+						<enlist class="enlist">Jan 2019: I completed a 5-course Deep Learning Specialization on Coursera! [<a href="https://www.coursera.org/account/accomplishments/specialization/TYWTC97WFSCF">Link</a>] 				
+						[<a href="https://www.coursera.org/account/accomplishments/verify/6AD3J5D2MVRJ">1</a>,
+						<a href="https://www.coursera.org/account/accomplishments/verify/TPNEMK3KZTGA">2</a>,
+						<a href="https://www.coursera.org/account/accomplishments/verify/6MHDHG9BYJYH">3</a>,
+						<a href="https://www.coursera.org/account/accomplishments/verify/BXRVX4GV7MUW">4</a>,
+						<a href="https://www.coursera.org/account/accomplishments/verify/2GRTT5EYTMKF">5</a>]
+						</enlist>
+							
+	 					
+						<enlist class="enlist">Oct 2018: Our paper ''High-Assurance Cryptographic Hardware from Untrusted Components'' is a finalist for the CSAW Europe Applied Research Award. [<a href="https://csaw.engineering.nyu.edu/research/finalists">Link</a>]</enlist>
+						
+						<enlist class="enlist">Oct 2018: I'm quoted in ''Wired'' about our work on hardware trojans. [<a href="https://www.wired.com/story/supply-chain-hacks-cybersecurity-worst-case-scenario/">Link</a>]</enlist>
+						
+						<enlist class="enlist">Sep 2018: My interview on Süddeutsche Zeitung is online. [<a href="https://www.sueddeutsche.de/wissen/heidelberg-laureate-forum-vorsichtig-in-neue-welten-1.4137906">Link</a>]</enlist>
+											
+						<enlist class="enlist">Sep 2018: I am listed in the 10 out of 200 young scientists by Heidelberg Laureate Forum! [<a href="https://scilogs.spektrum.de/hlf/10-out-of-200-between-verifiability-and-privacy-vasilios-mavroudis-makes-sense-of-our-data/">Link</a>]</enlist>
+						
+						<enlist class="enlist">Sep 2018: Our article on Javacard was published at Hackernoon! [<a href="https://hackernoon.com/javacard-the-execution-environment-you-didnt-know-you-were-using-11ee1401d4f">Link</a>]</enlist>
+						
+						<enlist class="enlist">Aug 2018: Our "Cryptogame" session proposal has been accepted in Mozfest 2108. [<a href="https://github.com/MozillaFestival/mozfest-program-2018/issues/429">Link</a>]</enlist>
+						
+						<enlist class="enlist">Aug 2018: Our "Cryptogame" project has been funded by the public engagement unit at UCL. [<a href="https://www.ucl.ac.uk/culture/projects/2018-train-and-engage-projects-funded">Link</a>]</enlist>
+						
+						<enlist class="enlist">July 2018: Received the Werner Romberg grant to attend the Heidelberg Laureate Forum! [<a href="http://www.heidelberg-laureate-forum.org/">Link</a>]</enlist>
+						
+						<enlist class="enlist">Jul 2018: Our write up on the JavaCard ecosystem was published by the Software Sustainability Institute and the Benthem's Gaze blog. [<a href="https://software.ac.uk/blog/2018-07-13-javacard-execution-environment-you-didnt-know-you-were-using">Link 1</a>] [<a href="https://www.benthamsgaze.org/2018/07/13/javacard-the-execution-environment-you-didnt-know-you-were-using/">Link 2</a>] </enlist>
+						<enlist class="enlist">Jun 2018: Thrilled to serve as a publications co-chair for the Privacy Enhancing Technologies symposium 2019. [<a href="https://petsymposium.org/cfp19.php">Link</a>]</enlist>
+						
+						<enlist class="enlist">May 2018: Our preprint on verifiable data access is out. [<a href="https://arxiv.org/abs/1805.04772">Link</a>]</enlist>
+						
+						<enlist class="enlist">May 2018: Started my research visit at the systems security group in ETHz. [<a href="http://www.syssec.ethz.ch/people/visitors.html">Link</a>]</enlist>
+						
+						<enlist class="enlist">Apr 2018: Cyber World Magazine features my article on the future of hardware-trojans and the security of chips in critical systems. [<a href="https://issuu.com/secgate/docs/cyber_world_april2018/62">Link</a>]</enlist>
+						
+						<enlist class="enlist">Apr 2018: Presented our work on ultrasonic signals at Stanford security seminar. [<a href="https://crypto.stanford.edu/seclab/sem-17-18/mavroudis.html">Link</a>]</enlist>
+											
+						<enlist class="enlist">Apr 2018: More press coverage for our work on ultrasonic signals. [<a href="https://www.wired.com/story/ultrasonic-signals-wild-west-of-wireless-tech/">Link</a>]</enlist>
+						
+						<enlist class="enlist">Apr 2018: Presented with Giovanni Vigna (UCSB, Lastline) our work on the security of ultrasonic communications at RSA Conference. [<a href="https://www.rsaconference.com/events/us18/agenda/sessions/11615-the-good-the-bad-and-the-ugly-of-the-ultrasonic">Link</a>]</enlist>
+						
+						<enlist class="enlist">Mar 2018: Our preprint on tracking technologies found in the retail spaces is out. [<a href="https://osf.io/preprints/lawarxiv/8qn9f">Link</a>]</enlist>
+											
+						<enlist class="enlist">Feb 2018: Completed our cryptography masterclass for year-11 students. [<a href="https://twitter.com/mavroudisv/status/968068474256941056">Link</a>]</enlist>
+					</div>
+				</div>
+			</div>
 		</div>
-	  </div>
-	</nav>
-  
-  <!-- Page Content -->
-    <div class="container">
+		
+		
+		<div class="" style="display: block;">
+			<div class="content-md container">
+				<h2 id="projects">Selected Projects <a style="color:#333;" href="https://github.com/mavroudisv/"><img src="img/icons/github.png" width="27" height="27"></a></h2>
+				<div class="row row-m-t">
+					<div class="col-sm-3"><br><br><a href="img/projects/embedding.png"><img alt="img" src="img/projects/embedding.png" class="img-responsive" width="200" height="200"></a></div>
+					<div class="col-sm-6" align="justify"> 
+						<p><strong><font size="4">Encrypted Traffic Classification using High-dimensional Embeddings</font></strong></p>
+						This project studies the resilience of encrypted-communications schemes against adversaries that intent
+						to breach the privacy of individual users. To evaluate widely-used schemes, we employ deep neural network 
+						models so as to map encrypted traffic traces into high-dimensional representations (see figure on the left). 
+						This enables us to generate a database of labeled traces that can then be used to classify unlabeled samples 
+						based on their proximity. Our results show that communication patterns suffice to reconstruct user activity with 
+						high accuracy and thus widely-deployed encrypted-communications systems offer weaker privacy guarantees 
+						than previously thought. This paper and the corresponding defence tools are currently under submission.
+						<p align="right">[<a href="https://ieeexplore.ieee.org/abstract/document/10202633">Paper</a>]</p>
+					</div>			
+				</div>
+				<br><br><br>
+				<div class="row row-m-t">
+					<div class="col-sm-3"><br><br><a href="img/projects/probes.png"><img alt="img" src="img/projects/probes.png" class="img-responsive" width="200" height="200"></a></div>
+					<div class="col-sm-6" align="justify"> 
+						<p><strong><font size="4">Information Leakage Classification with Deep Neural Networks</font></strong></p>
+						Near-field microprobes have the capability to isolate small regions of a chip
+						surface and enable precise measurements with high spatial resolution. Being able
+						to distinguish the activity of small regions has given rise to attacks that exploit 
+						the spatial dependencies of cryptographic algorithms in order to recover the secret key. 
+						This project introduces a set of techniques that allow security researchers to evaluate
+						the leakage properties of any chip. We show that deep neural network models
+						outperform previously proposed methods (e.g., difference of means, multivariate templates),
+						especially in the context of single-shot classification and small memory regions.
+						We validate the practicality of our proposed models by classifying the leakages from 
+						the SRAM of a modern ARM Cortex-M4 chip. Our results show that we were able to always				 
+						distinguish the activity between 2 SRAM regions of 128 bytes each, while for 256 SRAM 
+						single-byte regions we achieve 32% accuracy.
+						<p align="right">[<a href="https://eprint.iacr.org/2019/230">Paper</a>]</p>
+					</div>			
+				</div>
+				<br><br><br>
+				<div class="row row-m-t">
+					<div class="col-sm-3"><br><br><a href="img/projects/multiballot.png"><img alt="img" src="img/projects/multiballot.png" class="img-responsive" width="150" height="150"></a></div>
+					<div class="col-sm-6" align="justify"> 
+						<p><strong><font size="4">MultiBallot: A Scheme for Privacy-preserving, Verifiable Statistics</font></strong></p>
+						Processing sensitive data for scientific purposes has the potential to bring substantial benefits both to individuals and society, 
+						however, it also requires strong guarantees that the data will not be used inappropriately. This project attempts to address some of 
+						the open challenges in the area: 1) effective ways to hold data processors accountable, 2) preserving
+						the privacy of individuals and 3) protect the integrity of their data. For this purpose, we introduce MultiBallot, 
+						a privacy-preserving scheme that allows organizations to publish statistics derived from sensitive user
+						data without breaching the privacy of the individual data subjects. Our scheme is based on ThreeBallot, a paper-voting design that allows 
+						voters to verify both the result of the elections (univariate operation) and that their individual vote was counted towards it. Our work 
+						extends this scheme and enables users to compute multivariate statistics on the published data. Moreover, MultiBallot can provide strong data 
+						integrity guarantees and public verifiability, when combined with a high-integrity data structure (e.g., a blockchain). These additional
+						features make MultiBallot applicable in a wide range of data-processing scenarios such as healthcare statistics and communication records.
+						<p align="right">[<a href="https://arxiv.org/abs/1805.04772">Paper</a>]</p>
+					</div>			
+				</div>
+				<br><br><br>
+				<div class="row row-m-t">
+					<div class="col-sm-3"><br><br><a href="img/projects/protocol.png"><img alt="img" src="img/projects/protocol.png" class="img-responsive" width="200" height="200"></a></div>
+					<div class="col-sm-6" align="justify"> 
+						<p><strong><font size="4">Leakage-Resilient Protocols for Cryptographic Operations</font></strong></p>
+						Cryptographic devices used in critical applications operate under the assumption that hardware components 
+						remain always compliant with their specifications. Consequently, components that contain intentional or 
+						unintentional errors (e.g., bugs, hardware trojans, backdoors) cannot reliably maintain any of their
+						security properties. In this work, we relax this strict correctness requirement and demonstrate how trusted, high-assurance 
+						hardware can be built from untrusted and potentially malicious components. We employ more than a hundred COTS secure
+						cryptocoprocessors, verified to FIPS140-2 Level 4 tamper-resistance standards, and use them to realize high-confidentiality random
+						number generation, key derivation, public key decryption and signing. Our experiments show a reasonable computational overhead
+						(less than 1% for both Decryption and Signing) and an exponential increase in backdoor-tolerance as more ICs are added.
+						<p align="right">[<a href="https://acmccs.github.io/papers/p1583-mavroudisA.pdf">Paper</a>] [<a href="https://github.com/OpenCryptoProject/Myst">Code</a>]</p>
+					</div>			
+				</div>					
+			</div>
+		</div>
+		
+		
+		<div class="bg-light" style="display: block;">
+			<div class="content-md container">
+				<div class="row">
+					<h2 id="publications">Publications <a style="color:#333;" href="https://scholar.google.com/citations?user=b10w74sAAAAJ"><img src="img/icons/scholar.png" width="27" height="27"></a></h2>
 
-        <div class="row">
+					<h4>Peer-reviewed & Preprints</h4>
 
-            <!-- Entries Column -->
-            <div class="col-md-8" style="height: 100vh;">
-                
-                <!-- Main Image -->
-                <img class="img-responsive" src="photo.gif" alt=""><br>
-                
-                <div style="margin-top:3%; text-align:justify;">                
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing <a href="#">elit</a>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					<blockquote class="blockquote">
+						<a href="https://arxiv.org/abs/2501.14249">Humanity's Last Exam</a>
+						<br>Center for AI Safety, 2025</br>
+					</blockquote>
 					
-					<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+					<blockquote class="blockquote">
+						<a href="https://arxiv.org/pdf/2412.11194">SoK: Automated Vulnerability Detection</a>
+						<br>Shereen E., Ristea D., Vyas S., McFadden S., Dwyer M., Hicks C., <u>Mavroudis V</u>,
+						Under submission 2024
+					</blockquote>
 					
-					<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                </div>
-            </div> 
+					<blockquote class="blockquote">
+						<a href="https://arxiv.org/abs/2410.21939">AI Cyber Risk Benchmark: Automated Exploitation Capabilities</a>
+						<br>Ristea D., <u>Mavroudis V.</u>, Hicks C., 2024
+					</blockquote>
+						
+					<blockquote class="blockquote">
+						<a href="https://arxiv.org/abs/2410.16324">CybORG++: An Enhanced Gym for the Development of Autonomous Cyber Agents</a> [<a href="https://github.com/alan-turing-institute/CybORG_plus_plus/">Repository</a>]
+						<br>Emerson H., Bates L., Hicks C., <u>Mavroudis V.</u>, 2024
+					</blockquote>
 
-            <!-- Contact Info on the Sidebar -->
-            <div class="col-md-4">
-                <div style="font-family: 'Oswald', sans-serif; font-size: 32px;"><b>John Doe</b></div><br>
-                <p><b>john at doe.com</b><br>
-                <p>Random Department<br>
-                University of Randomness<br>
-                Street<br>
-                City <br>
-                Country<br>
-                </p>
-            </div>
-            
-            
-            <!-- Links on the Sidebar -->
-            <div class="col-md-4" style="margin-top:2%">
-              <dd><a href="#">Google Scholar</a></dd> 
-              <dd><a href="#">Twitter</a></dd>
-              <dd><a href="#">LinkedIn</a></dd>
-            </div>
-            
-            
-            <!-- Publications -->
-            <div class="col-md-8" style="height: 100vh;">    
-                <h2 id="publications">Publications</h2>
-                
-                <strong>Peer-reviewed</strong><br/>
-                <ul>
-                <li class="paper" words="add, your, keywords, here"><a href="#">Full title</a> Names of the authors</li>
-                </ul>
-            
-                <strong>Technical Reports</strong><br/>
-                <ul>
-                <li class="paper" words="add, your, keywords, here"><a href="#">Full title</a>. Details of the report</li>
-                </ul>
-            </div>
+					<blockquote class="blockquote">
+						<a href="https://neurips.cc/virtual/2024/poster/93293">Online Convex Optimisation: The Optimal Switching Regret for all Segmentations Simultaneously</a> [<a href="https://arxiv.org/pdf/2405.20824">PDF</a>]
+						<br>Stephen P., Hicks C., <u>Mavroudis V.</u>, Herbster, M., NeurIPS, 2024 [Spotlight]
+					</blockquote>		
+					
+					<blockquote class="blockquote">
+						<a href="https://dl.acm.org/doi/10.1145/3689933.3690835">Entity-based Reinforcement Learning for Autonomous Cyber Defence</a>
+						<br>Thompson I., Caron A., Hicks C., <u>Mavroudis V.</u>, Workshop on Autonomous Cybersecurity (AutonomousCyber), 2024
+					</blockquote>
+						
+					<blockquote class="blockquote">
+						<a href="https://arxiv.org/abs/2408.02148">Environment Complexity and Nash Equilibria in a Sequential Social Dilemma</a>
+						<br>Yasir M., Howes A., <u>Mavroudis V.</u>, Hicks C., 17th European Workshop on Reinforcement Learning (EWRL), 2024
+					</blockquote>
+						
+					<blockquote class="blockquote">
+						<a href="https://www.turing.ac.uk/sites/default/files/2024-07/hicks-mavroudis-2024.pdf">Autonomous cyber defence: Beyond games?</a> [<a href="https://www.turing.ac.uk/sites/default/files/2024-07/hicks-mavroudis-2024.pdf">PDF</a>]
+						<br>Hicks C., <u>Mavroudis V.</u>, Turing Report, 2024
+					</blockquote>
+					
+					<blockquote class="blockquote">
+						<a href="https://www.gov.uk/government/publications/international-scientific-report-on-the-safety-of-advanced-ai">International Scientific Report on the Safety of Advanced AI</a> [<a href="https://assets.publishing.service.gov.uk/media/66474eab4f29e1d07fadca3d/international_scientific_report_on_the_safety_of_advanced_ai_interim_report.pdf">PDF</a>]
+						<br>Bengio Y., Privitera D., Besiroglu T., Bommasani R., Casper S., Choi Y., Goldfarb D., Heidari H., Khalatbari L., <u>Mavroudis V.</u>, Longpre S., Interim Report, 2024
+					</blockquote>
 
-            
-        </div>
+					<blockquote class="blockquote">
+						<a href="https://arxiv.org/pdf/2405.03052">A View on Out-of-Distribution Identification from a Statistical Testing Theory Perspective</a> [<a href="https://arxiv.org/pdf/2405.03052">PDF</a>]
+						<br>Caron A., Hicks C., <u>Mavroudis V.</u>, ArXiv, 2024
+					</blockquote>
+
+					<blockquote class="blockquote">
+						<a href="https://arxiv.org/html/2402.15883v1">Fusion Encoder Networks</a> [<a href="https://arxiv.org/pdf/2402.15883v1">PDF</a>]
+						<br>Stephen P., Hicks C., <u>Mavroudis V.</u>, ArXiv, 2024
+					</blockquote>	
+					
+					<blockquote class="blockquote">
+						<a href="https://www.computer.org/csdl/proceedings-article/spw/2024/548700a076/1YiWiYVyKZ2">Mitigating Deep Reinforcement Learning Backdoors in the Neural Activation Space</a> [<a href="https://arxiv.org/abs/2407.15168">PDF</a>]
+						<br>Vyas S., Hicks C., <u>Mavroudis V.</u>, Deep Learning Security and Privacy Workshop (DLSP), 2024
+					</blockquote>
+
+					<blockquote class="blockquote">
+						<a href="https://kclpure.kcl.ac.uk/ws/portalfiles/portal/251249221/Wendigo.pdf">Deep Reinforcement Learning for Denial-of-Service Query Discovery in GraphQL</a> [<a href="https://kclpure.kcl.ac.uk/ws/portalfiles/portal/251249221/Wendigo.pdf">PDF</a>]
+						<br>McFadden S., Maugeri M., Hicks C., <u>Mavroudis V.</u>, Pierazzi F., Deep Learning Security and Privacy Workshop (DLSP), 2024
+					</blockquote>
+					
+					<blockquote class="blockquote">
+						<a href="https://arxiv.org/pdf/2306.13773">Nearest Neighbour with Bandit Feedback</a> [<a href="https://arxiv.org/pdf/2306.13773">PDF</a>]
+						<br>Pasteris S., Hicks C., <u>Mavroudis V.</u>, Annual Conference on Neural Information Processing Systems (NeurIPS), 2023
+					</blockquote>
+					
+					<blockquote class="blockquote">
+						<a href="https://ieeexplore.ieee.org/abstract/document/10202633/">Adaptive Webpage Fingerprinting from TLS Traces</a>
+						<br><u>Mavroudis V.</u>, Hayes J., 53rd Annual IEEE/IFIP International Conference on Dependable Systems and Networks (DSN), 2023
+					</blockquote>
+					
+					<blockquote class="blockquote">
+						<a href="https://aisec.cc">Reward Shaping for Happier Autonomous Cyber Security Agents</a>
+						<br>Bates E., <u>Mavroudis V.</u>, Hicks C., 16th ACM Workshop on Artificial Intelligence and Security (AISec), 2023
+					</blockquote>
+
+					<blockquote class="blockquote">
+						<a href="https://aisec.cc">Canaries and Whistles: Resilient Drone Communication Networks with (or without) Deep Reinforcement Learning</a>
+						<br>Hicks C., <u>Mavroudis V.</u>, Foley M., Davies T., Highnam K., Watson T., 16th ACM Workshop on Artificial Intelligence and Security (AISec), 2023
+					</blockquote>
+					
+					<blockquote class="blockquote">
+						<a href="https://dl.acm.org/doi/abs/10.1145/3488932.3527286">Autonomous network defence using reinforcement learning</a>
+						<br>Foley M., Hicks C., Highnam K., <u>Mavroudis V.</u>, Asia Conference on Computer and Communications Security (AsiaCCS), 2022
+					</blockquote>
+
+					<blockquote class="blockquote">
+						<a href="https://www.camlis.org/myles-foley">Inroads into Autonomous Network Defence using Explained Reinforcement Learning</a> [<a href="https://arxiv.org/pdf/2306.09318">PDF</a>]
+						<br>Foley M., Wang M., Hicks C., <u>Mavroudis V.</u>, Conference on Applied Machine Learning in Information Security (CAMLIS), 2022
+					</blockquote>
+					
+					<blockquote class="blockquote">
+						<a href="https://link.springer.com/chapter/10.1007/978-3-031-29504-1_1">SIMple ID: QR Codes for Authentication Using Basic Mobile Phones in Developing Countries</a> [<a href="https://drive.google.com/file/d/1W-TlaJcfDHJIz4ZGOarsZoQRdpjwmDYj/view">PDF</a>]
+						<br>Hicks C., <u>Mavroudis V.</u>, Crowcroft J., The 18th International Workshop on Security and Trust Management (STM), 2022
+					</blockquote>
+		
+					<blockquote class="blockquote">
+						<a href="https://link.springer.com/chapter/10.1007/978-3-030-93747-8_5">An Interface Between Legacy and Modern Mobile Devices for Digital Identity</a> [<a href="https://arxiv.org/pdf/2112.05566.pdf">PDF</a>]
+						<br><u>Mavroudis V.</u>, Hicks C., Crowcroft J., International Workshop on Emerging Technologies for Authorization and Authentication (ETAA), 2021
+					</blockquote>			
+					
+					<blockquote class="blockquote">
+						<a href="https://ieeexplore.ieee.org/abstract/document/9229780">JCMathLib: Wrapper Cryptographic Library for Transparent and Certifiable JavaCard Applets</a> [<a href="https://discovery.ucl.ac.uk/id/eprint/10117901/1/JCMathLib__Towards_Transparent_and_Auditable_JavaCard_Applets%20%283%29.pdf">PDF</a>]
+						<br><u>Mavroudis V.</u>, Svenda P., IEEE European Symposium on Security and Privacy Workshops (EuroS&PW), March 2020
+					</blockquote>			
+					
+					
+					<blockquote class="blockquote">
+						<a href="https://www.ndss-symposium.org/ndss2020/accepted-papers/">Snappy: Fast Blockchain Payments</a> [<a href="https://arxiv.org/pdf/2001.01278.pdf">PDF</a>]
+						<br><u>Mavroudis V.</u>, , Wuest K., Dhar A., Kostiainen K., Capkun S., Network & Distributed System Security Symposium (NDSS), Feb 2020
+					</blockquote>			
+					
+					<blockquote class="blockquote">
+						<a href="https://asiacrypt.iacr.org/2019/acceptedpapers.html">Location, location, location: Revisiting modeling and exploitation for location-based side channel leakages. </a>[<a href="https://eprint.iacr.org/2019/230">PDF</a>]
+						<br>Andrikos C., Batina L., Chmielewski L., Lerman L., <u>Mavroudis V.</u>, Papagiannopoulos K., Perin G., Rassias G., Sonnino A.,
+						<br>25th Annual International Conference on the Theory and Application of Cryptology and Information Security (AsiaCrypt) 2019 
+					</blockquote>
+					
+					<blockquote class="blockquote">
+						<a href="https://aft.acm.org/program">Libra: Fair Order-Matching for Electronic Financial Exchanges. </a>[<a href="https://arxiv.org/pdf/1910.00321.pdf">PDF</a>]
+						<br><u>Mavroudis V.</u>, Melton H., Advances in Financial Technologies  <u>AFT</u> 2019, October 2019
+					</blockquote>
+									      
+					<blockquote class="blockquote">
+						<a href="https://www.cl.cam.ac.uk/events/spw/2019/"> Bounded Temporal Fairness for FIFO Financial Markets. </a> [<a href="https://arxiv.org/pdf/1911.09209.pdf">PDF</a>]
+						<br><u>Mavroudis V.</u>, 26th International Workshop on Security Protocols <u>SPW</u>, April 2019
+					</blockquote>
+					
+					<blockquote class="blockquote">
+						<a href="https://www.threat-arrest.eu/html/eurosec-2019/#programme"> Market Manipulation as a Security Problem: Attacks and Defenses</a> [<a href="https://arxiv.org/abs/1903.12458">PDF</a>]
+						<br><u>Mavroudis V.</u>, 12th European Workshop on Systems Security <u>EuroSec</u>, March 2019
+					</blockquote>
+					
+					<blockquote class="blockquote">
+						<a href="https://arxiv.org/abs/1810.01662">Towards Low-level Cryptographic Primitives for JavaCards</a>.<br><u>Mavroudis V.</u>, Svenda P., Oct 2018
+					</blockquote>
+					
+					<blockquote class="blockquote">
+						<a href="https://arxiv.org/abs/1805.04772">VAMS: Verifiable Auditing of Access to Confidential Data</a>.<br>Hicks A., <u>Mavroudis V.</u>, Al-Bassam M., Meiklejohn S., Murdoch S., May 2018
+					</blockquote>
+					
+					<blockquote class="blockquote">
+						<a href="http://digital-library.theiet.org/content/conferences/10.1049/cp.2018.0018">Eavesdropping Whilst Youre Shopping: Balancing Personalisation and Privacy in Connected Retail Spaces</a> [<a href="https://osf.io/vea8f/">PDF</a>]
+						<br><u>Mavroudis V.</u>, Veale M. (Equal Contribution), <u>PETRAS/IoTUK/IET</u> Living in the IoT Conference, 2018.
+					</blockquote>
+					
+					<blockquote class="blockquote">
+						<a href="https://dl.acm.org/citation.cfm?id=3133961">A Touch of Evil: High-Assurance Cryptographic Hardware from Untrusted Components</a> [<a href="https://acmccs.github.io/papers/p1583-mavroudisA.pdf">PDF</a>, <a href="https://arxiv.org/abs/1709.03817">ArXiv</a>]<br>
+						<u>Mavroudis V.</u>, Cerulli A., Svenda P., Cvrcek D., Klinec D., Danezis G., 24th ACM Conference on Computer and Communications Security <u>CCS</u>, 2017.<br>
+						<a style="color:#ff6961" href="https://csaw.engineering.nyu.edu/research/finalists">CSAW 2018 Applied Research Competition Finalist.</a>
+					</blockquote>
+					
+					<blockquote class="blockquote">
+						<a href="https://www.degruyter.com/view/j/popets.2017.2017.issue-2/popets-2017-0018/popets-2017-0018.xml">On the Privacy and Security of the Ultrasound Tracking Ecosystem</a> [<a href="https://petsymposium.org/2017/papers/issue2/paper18-2017-2-source.pdf">PDF</a>]
+						<br><u>Mavroudis V.</u>, Hao S., Fratantonio Y., Maggi F., Kruegel C., Vigna G., Proceedings of the Privacy Enhancing Technologies Symposium <u>PETs</u>, 2017
+					</blockquote>
+					
+					<blockquote class="blockquote">
+						<a href="https://link.springer.com/chapter/10.1007/978-3-319-09465-6_21">Visual Analytics for Enhancing Supervised Attack Attribution in Mobile Networks</a> [<a href="papers/analytics-iscis.pdf">PDF</a>]
+						<br>Papadopoulos S., <u>Mavroudis V.</u>, Drosou A., Tzovaras D., 29th International Symposium on Computer and Information Sciences, 2014
+					</blockquote>
+					
+					<!--
+					<blockquote class="blockquote">
+						Development of Realtime Mobile Security Monitoring System
+						<br><u>Mavroudis V.</u>, Mavridis I., 2nd Conference on Information Technology Applications and Administration Strategies, 2010.
+					</blockquote>
+					
+					<blockquote class="blockquote">
+						Use and Effective Application of Free and Open Source Software in Education
+						<br><u>Mavroudis V.</u>, Mouratis S., 4th National Conference of Information Technology Educators, 2010.
+					</blockquote>
+					-->
+
+					<br><h4>Technical Reports</h4>
+
+					<blockquote class="blockquote">
+						<a href="https://www.preprints.org/manuscript/202411.0566/v1">LangChain v0.3</a>
+						<br>Vasilios Mavroudis, Preprints, https://doi.org/10.20944/preprints202411.0566.v1, November 2024</br>
+					</blockquote>
+					
+					<blockquote class="blockquote">
+						<a href="https://ubeacsec.github.io/downloads/report.pdf">The Ultrasound Tracking Ecosystem</a>.<br>Vasilios Mavroudis, Shuang Hao, Yanick Fratantonio, Federico Maggi, Giovanni Vigna, and Christopher Kruegel. November 2016
+					</blockquote>
+					
+					<blockquote class="blockquote">
+						<a href="papers/techrep-cor.pdf">Correlation Analysis and Abnormal Event Detection Module</a>.<br>EU FP7 Project: Enhanced Network Security for Seamless Service Provisioning in the Smart Mobile Ecosystem
+					</blockquote>
+					
+					<blockquote class="blockquote">
+						<a href="papers/techrep-detection.pdf">Anomaly detection based on real-time exploitation of billing systems</a>.<br>EU FP7 Project: Enhanced Network Security for Seamless Service Provisioning in the Smart Mobile Ecosystem
+					</blockquote>
+					
+					<blockquote class="blockquote">
+						<a href="papers/techrep-anomaly.pdf">Anomaly detection within femtocell architectures</a>.<br>EU FP7 Project: Enhanced Network Security for Seamless Service Provisioning in the Smart Mobile Ecosystem
+					</blockquote>
+					
+					<blockquote class="blockquote">
+						<a href="papers/techrep-infosource.pdf">Network information sources</a>.<br>EU FP7 Project: Enhanced Network Security for Seamless Service Provisioning in the Smart Mobile Ecosystem
+					</blockquote>
 
 
-    </div>
-    <!-- /.container -->
-    
-    <!-- Other people may like it too! -->
-    <a style="color:#b5bec9;font-size:0.8em; float:right;" href="https://github.com/mavroudisv/plain-academic">Plain Academic</a> 
-    
-</body>
+					<br><h4>Theses</h4>
+					<blockquote class="blockquote">
+						<a href="https://mavroud.is/papers/mscthesis.pdf">Crux: Privacy-preserving Statistics for Tor</a> [<a href="https://mavroud.is/papers/mscthesis.pdf">PDF</a>], Information Security Group, University College London, UK, 2015.<br>Supervisor: George Danezis 
+					</blockquote>
+					
+					<blockquote class="blockquote">
+						Cassiopeia: Real-time mobile security monitoring system, Dept. of Applied Informatics, University of Macedonia, Greece, 2012.<br>Supervisor: Ioannis Mavridis
+					</blockquote>
+				</div>
+			</div>
+		</div>
 
+		
+		<div class="" style="display: block;">
+			<div class="content-md container">
+				<div class="row">
+					<h2 id="media">Media <a style="color:#333;" href="https://www.youtube.com/channel/UCti34A0wGEgbghqXC-rxPkQ"><img src="img/icons/yt.png" width="27" height="27"></a></h2>
+
+					<div class="col-lg-3 col-md-4 col-xs-6">
+						<a class="thumbnail" style="border:none; background-color : transparent" href="https://youtu.be/sPd7Nwidfko">
+							<img class="img-responsive" src="https://img.youtube.com/vi/sPd7Nwidfko/hqdefault.jpg" alt="">
+						</a>
+					</div>
+					
+					<div class="col-lg-3 col-md-4 col-xs-6">
+						<a class="thumbnail" style="border:none; background-color : transparent" href="https://www.youtube.com/watch?v=OOyhfylJXhM">
+							<img class="img-responsive" src="https://img.youtube.com/vi/OOyhfylJXhM/hqdefault.jpg" alt="">
+						</a>
+					</div>
+					
+					<div class="col-lg-3 col-md-4 col-xs-6">
+						<a class="thumbnail" style="border:none; background-color : transparent" href="https://www.youtube.com/watch?v=OXgIAFavgVE&t=1181s">
+							<img class="img-responsive" src="img/media/zdf.jpg" alt="">
+						</a>
+					</div>
+					
+					<div class="col-lg-3 col-md-4 col-xs-6">
+						<a class="thumbnail" style="border:none; background-color : transparent" href="https://www.youtube.com/watch?v=WW1-xnTIDjQ&t=8s">
+							<img class="img-responsive" src="img/media/ccc.jpg" alt="">
+						</a>
+					</div>
+					
+					<div class="col-lg-3 col-md-4 col-xs-6">
+						<a class="thumbnail" style="border:none; background-color : transparent" href="https://www.youtube.com/watch?v=Sf9ZkHX2cWA&t=15s">
+							<img class="img-responsive" src="https://img.youtube.com/vi/Sf9ZkHX2cWA/hqdefault.jpg" alt="">
+						</a>
+					</div>	
+					
+					<div class="col-lg-3 col-md-4 col-xs-6">
+						<a class="thumbnail" style="border:none; background-color : transparent" href="https://www.youtube.com/watch?v=qygTrfW4ADg">
+							<img class="img-responsive" src="https://img.youtube.com/vi/qygTrfW4ADg/hqdefault.jpg" alt="">
+						</a>
+					</div>
+					
+					<div class="col-lg-3 col-md-4 col-xs-6">
+						<a class="thumbnail" style="border:none; background-color : transparent" href="https://www.youtube.com/watch?v=GRPYF9b7_tA">
+							<img class="img-responsive" src="https://img.youtube.com/vi/GRPYF9b7_tA/hqdefault.jpg" alt="">
+						</a>
+					</div>
+					
+					<div class="col-lg-3 col-md-4 col-xs-6">
+						<a class="thumbnail" style="border:none; background-color : transparent" href="https://www.youtube.com/watch?v=THFOnA6m8KM">
+							<img class="img-responsive" src="https://img.youtube.com/vi/THFOnA6m8KM/hqdefault.jpg" alt="">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="bg-light" style="display: block;">
+			<div class="content-md container">
+				<div class="row">
+					<h2 id="talks">Talks</h2>
+					<enlist class="enlist">Libra: Fair Order-Matching for Electronic Financial Exchanges., Juels Group Research Meeting, Online/Cornell University, New York, US, 29 October 2019. [<a href="http://juels.tech.cornell.edu/">Link</a>]</enlist>
+					<enlist class="enlist">Cryptographic Hardware from Untrusted Components, RISE Annual Conference, London, UK, 14 November 2018. [<a href="https://www.ukrise.org/wp-content/uploads/2018/10/Programme-Public-281018-RISE-Annual-Conference.docx.pdf">Link</a>]</enlist>
+					<enlist class="enlist">A touch of Evil: Cryptographic Hardware from Untrusted Components (poster), CSAW 2018, Valence, France, 9 November 2018.</enlist>
+					<enlist class="enlist">Cryptogame: Pirates & Guardians of the Galaxy, London, UK, 27 October 2018. [<a href="https://guidebook.com/guide/147793/event/21682603/">Link</a>]</enlist>
+					<enlist class="enlist">High-Assurance Cryptographic Hardware from Untrusted Components. Stanford Security Seminar, Palo Alto, US, 19 April 2018. [<a href="https://crypto.stanford.edu/seclab/sem-17-18/mavroudis.html">Link</a>]</enlist>
+					<enlist class="enlist">The Good, the Bad and the Ugly of the Ultrasonic Communications Ecosystem. RSA Conference 2018, San Fransisco US, 17 April 2018. [<a href="https://www.rsaconference.com/events/us18/agenda/sessions/11615-the-good-the-bad-and-the-ugly-of-the-ultrasonic">Link</a>]</enlist>
+					<enlist class="enlist">A witch-hunt for trojans in our chips. London Enterprise Tech Meetup, London, UK, 12 February 2018. [<a href="http://www.lnetm.com/post/170509996990/february-lnetm-it-sec-theme">Link</a>]</enlist>
+					<enlist class="enlist">Cryptographic Hardware from Untrusted Components. Cryptacus Workshop, Nijmegen, Netherlands, 16-18 November 2017. [<a href="https://cryptacus.cs.ru.nl/program.shtml">Link</a>]</enlist>
+					<enlist class="enlist">Cryptographic Hardware from Untrusted Components. IMDEA Software Inst., Madrid, Spain, 28 Sept 2017. [<a href="http://www.imdea.org/content/talk-vasilios-mavroudis-cryptographic-hardware-untrusted-components">Link</a>]</enlist>
+					<enlist class="enlist">Towards Trojan-tolerant Cryptographic Hardware. ZISC Seminar ETH, Zurich, Switzerland, 20 Sept 2017. [<a href="https://zisc.ethz.ch/event/zisc-lunch-seminar-towards-trojan-tolerant-cryptographic-hardware/">Link</a>]</enlist>
+					<enlist class="enlist">OpenCrypto: Unchaining the JavaCard Ecosystem. Blackhat US, Las Vegas, US, 22-27 July 2017. [<a href="https://www.blackhat.com/us-17/briefings.html#vasilios-mavroudis">Link</a>]</enlist>
+					<enlist class="enlist">Trojan-tolerant Hardware & Supply Chain Security in Practice. Defcon 25, Las Vegas, US, 27-30 July 2017. [<a href="https://www.defcon.org/html/defcon-25/dc-25-speakers.html#Mavroudis">Link</a>]</enlist>
+					<enlist class="enlist">On the Privacy & Security of the Ultrasound Tracking Ecosystem. Computer Laboratory Security Seminar, Cambridge, UK, 21 February 2017. [<a href="http://talks.cam.ac.uk/talk/index/70937">Link</a>]</enlist>
+					<enlist class="enlist">Talking Behind Your Back: On the Privacy & Security of the Ultrasound Tracking Ecosystem. Mozilla International Privacy Day, London, UK, 28 Jan 2017. [<a href="https://air.mozilla.org/london-privacy-lab-international-privacy-day-2017-01-28/">Link</a>]</enlist>
+					<enlist class="enlist">Talking Behind Your Back: On the Privacy & Security of the Ultrasound Ecosystem. Information Security Seminar, UCL, London, UK, 19 January 2017. [<a href="http://sec.cs.ucl.ac.uk/ace_csr/seminars_calendar/seminar_details/article/on_the_privacy_and_security_of_the_ultrasound_ecosystem/">Link</a>]</enlist>
+					<enlist class="enlist">Talking Behind Your Back: Tough Love for the Ugly Ultrasound Tracking Ecosystem. Chaos Communication Congress, Hamburg, Germany, 27-30 Dec. 2016. [<a href="https://media.ccc.de/c/33c3">Link</a>]</enlist>
+					<enlist class="enlist">Cross-device Tracking Canaries. Data Transparency Lab Conference 2016, New York, US, 17-19 Nov 2017. [<a href="http://datatransparencylab.org/dtl-2016/travel-grants-2016/">Link</a>]</enlist>
+					<enlist class="enlist">Talking Behind Your Back: Attacks and Countermeasures of Ultrasonic Cross-device Tracking. Blackhat Europe, London, UK, 3–4 November 2016. [<a href="https://www.blackhat.com/eu-16/briefings.html#talking-behind-your-back-attacks-and-countermeasures-of-ultrasonic-cross-device-tracking">Link</a>][<a href="http://ubeacsec.github.io/downloads/slides.pdf">Slides</a>]</enlist>
+					<enlist class="enlist">Cassiopeia: Mobile security monitoring. FOSS conference 2011, Greece.</enlist>
+				</div>
+			</div>
+		</div>
+
+		<div class="" style="display: block;">
+			<div class="content-md container">
+				<div class="row">
+					<h2 id="service">Academic Service & Teaching</h2> 
+					<enlist class="enlist">Publications co-chair for the <a href="https://petsymposium.org/cfp19.php">Privacy Enhancing Technologies symposium 2019</a>.</enlist>
+					<enlist class="enlist">Co-organizing the <a href="http://www0.cs.ucl.ac.uk/staff/G.Stringhini/hacking.html">Hacking Seminars</a> at UCL (2017-2018).</enlist>
+					<enlist class="enlist">Organizing the <a href="http://sec.cs.ucl.ac.uk/ace_csr/ace_seminars/">Information Security Seminars</a> at UCL (2017-2018).</enlist>
+					<enlist class="enlist">External Reviewer for <a href="https://petsymposium.org/">Privacy Enhancing Technologies Symposium</a> (2017-2019).</enlist>
+					<enlist class="enlist">Teaching Assistant for <a href="http://www.cs.ucl.ac.uk/current_students/syllabus_index_2016_2017/mscisec/ga01_computer_security_1/">Computer Security I</a> module, Information Security MSc (Winter term 2017-2018).</enlist>
+					<enlist class="enlist">Guest Lecture on Acedemic Research, <a href="http://in2scienceuk.org/">In2ScienceUK</a> Organization (August 2017).</enlist>
+					<enlist class="enlist">Teaching Assistant for <a href="http://www.cs.ucl.ac.uk/current_students/syllabus_index_2016_2017/mscisec/ga02_computer_security_2/">Computer Security II</a> module, Information Security MSc (Spring term 2016-2017).</enlist>
+				</div>
+			</div>
+		</div>
+
+
+	
+	<footer class="footer"></footer>
+       
+
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-BR0RVVZQJ5"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	
+	  gtag('config', 'G-BR0RVVZQJ5');
+	</script>
+
+    </body>
 </html>
