@@ -8,6 +8,17 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+  <script>
+    // Function to open the CV PDF in a modal
+    function openCV() {
+      document.getElementById("cvModal").style.display = "block";  // Show the modal
+    }
+
+    // Function to close the modal
+    function closeCV() {
+      document.getElementById("cvModal").style.display = "none";  // Hide the modal
+    }
+  </script>
 </head>
 <body>
 
@@ -29,8 +40,8 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="#">Projects</a></li>
         <li><a href="#publications">Publications</a></li>
-        <!-- Link to PDF CV -->
-        <li><a href="https://github.com/macovaseas/macovaseas.github.io/blob/main/files/cv.pdf" target="_blank">CV</a></li>
+        <!-- Change the CV link to trigger the openCV function -->
+        <li><a href="javascript:void(0);" onclick="openCV()">CV</a></li>
       </ul>
     </div>
   </div>
@@ -82,6 +93,16 @@
         <li class="paper" words="add, your, keywords, here"><a href="#">Full title</a>. Details of the report</li>
       </ul>
     </div>
+  </div>
+</div>
+
+<!-- Modal to display CV -->
+<div id="cvModal" style="display:none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 9999;">
+  <div style="width: 80%; height: 90%; margin: 5% auto; background-color: white; padding: 20px; border-radius: 10px;">
+    <button onclick="closeCV()" style="font-size: 20px; padding: 10px; background-color: red; color: white; border: none; float: right;">X</button>
+    <h2 style="text-align:center;">Curriculum Vitae</h2>
+    <!-- Embed PDF inside modal -->
+    <iframe src="files/cv.pdf" width="100%" height="100%"></iframe>
   </div>
 </div>
 
